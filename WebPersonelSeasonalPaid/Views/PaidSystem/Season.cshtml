@@ -1,0 +1,46 @@
+﻿@using WebPersonelSeasonalPaid.Application.PaidSystem.Dtos;
+@model List<GetAllSeasonDto>
+<a href="/PaidSystem/AddSeason">Add Season</a>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var informations in Model)
+        {
+            <tr id="Season_@informations.SId">
+                <td>@informations.SId</td>
+                <td>@informations.Name</td>
+                <td>@informations.StartDate</td>
+                <td>@informations.EndDate</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+        }
+</style>
+

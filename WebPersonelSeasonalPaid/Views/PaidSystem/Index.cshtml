@@ -1,0 +1,50 @@
+﻿@using WebPersonelSeasonalPaid.Application.PaidSystem.Dtos;
+@model List<GetAllPersonelDto>
+<a href="/PaidSystem/AddPerson">Add Employee</a>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>TC</th>
+            <th>StartDate</th>
+            <th>Salary</th>
+            <th>Prim</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var informations in Model)
+        {
+            <tr id="Personel_@informations.PId">
+                <td>@informations.PId</td>
+                <td>@informations.Name</td>
+                <td>@informations.Surname</td>
+                <td>@informations.TC</td>
+                <td>@informations.StartDate</td>
+                <td>@informations.Paid.FirstOrDefault()?.Salary</td>
+                <td>@informations.Paid.FirstOrDefault()?.Prim</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+        }
+</style>
+

@@ -1,0 +1,30 @@
+﻿@using WebPersonelSeasonalPaid.Models;
+@model AddSeason
+
+@{
+    ViewData["Title"] = "Add Season";
+}
+
+<h2>Add Season</h2>
+
+<form asp-action="AddSeason" method="post">
+    <div class="form-group">
+        <label asp-for="SeasonName"></label>
+        <input asp-for="SeasonName" class="form-control" />
+        <span asp-validation-for="SeasonName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SeasonStartDate"></label>
+        <input asp-for="SeasonStartDate" type="date" class="form-control" />
+        <span asp-validation-for="SeasonStartDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SeasonEndDate"></label>
+        <input asp-for="SeasonEndDate" type="date" class="form-control" />
+        <span asp-validation-for="SeasonEndDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Season</button>
+</form>

@@ -1,0 +1,36 @@
+﻿@using WebPersonelSeasonalPaid.Models;
+@model AddPersonRequest
+
+<form method="post">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="Name" id="name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="surname">Surname:</label>
+        <input type="text" name="Surname" id="surname" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="tc">TC:</label>
+        <input type="text" name="Tc" id="tc" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <input type="date" name="StartDate" id="startDate" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="text" name="Salary" id="salary" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="prim">Prim:</label>
+        <input type="text" name="Prim" id="prim" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
